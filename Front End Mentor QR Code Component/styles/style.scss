@@ -1,0 +1,112 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(212, 45%, 89%);
+    --Grayish-blue: hsl(220, 15%, 55%);
+    --Dark-blue: hsl(218, 44%, 22%);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Outfit', sans-serif;
+    background-color: rgb(213, 234, 249);
+    p {
+        font-size: 15px;
+    }
+}
+
+.qr-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .flex-container-qr {
+        display: grid;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        width: 250px;
+        background-color: var(--White);
+        border-radius: 15px;
+        @media (max-width: 375px) {
+            width: 200px;
+            .image-container {
+                height: 200px !important;
+                .qr-image {
+                    width: 180px !important;
+                }
+            }
+            .description-container {
+                .des-heading {
+                    width: 180px !important;
+                    padding-left: 8px !important;
+                    font-size: 15px !important;
+                }
+                .des-para {
+                    font-size: 10px !important;
+                    width: 170px !important;
+                }
+            }
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 250px;
+            .qr-image {
+                border-radius: 10px;
+                width: 230px;
+            }
+        }
+        .description-container {
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            width: 250px;
+            margin-top: 10px;
+            .des-heading {
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 220px;
+                padding-left: 10px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .des-para {
+                padding-top: 15px;
+                font-size: 13px;
+                color: var(--Grayish-blue);
+                text-align: center;
+                width: 210px;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-family: inherit;
+    font-size: 14px;
+    .attribution-a {
+        text-decoration: none;
+    }
+    .attribution-p {
+        padding-bottom: 5px;
+    }
+}
